@@ -67,14 +67,6 @@
 
 
 
-    // ─── PDF Export ─────────────────────────────────────────────────
-    document.getElementById('exportPdfBtn').addEventListener('click', () => {
-        if (typeof PdfExporter !== 'undefined') {
-            PdfExporter.export();
-        } else {
-            alert('PDF Export script not loaded yet.');
-        }
-    });
 
 
     // ─── Render KPI Cards ───────────────────────────────────────────
@@ -182,17 +174,6 @@
                         </div>
                     `).join('')}
 
-                    <!-- Position Charts -->
-                    <div class="position-charts">
-                        <div class="position-chart-box">
-                            <h4>Vote Ranking</h4>
-                            <div class="position-chart-container" id="posChart_rank_${posIdx}"></div>
-                        </div>
-                        <div class="position-chart-box">
-                            <h4>Vote Distribution</h4>
-                            <div class="position-chart-container" id="posChart_donut_${posIdx}"></div>
-                        </div>
-                    </div>
                 </div>
             `;
         }).join('');
@@ -204,15 +185,6 @@
             });
         }, 300);
     }
-
-    function renderPositionCharts() {
-        const positions = ElectionData.getPositionResults();
-        positions.forEach((pos, i) => {
-            Charts.positionRankingChart(`posChart_rank_${i}`, pos);
-            Charts.positionDonutChart(`posChart_donut_${i}`, pos);
-        });
-    }
-
 
 
 
@@ -252,7 +224,6 @@
     renderKPIs();
     Charts.renderAll(data);
     renderPositionCards();
-    setTimeout(renderPositionCharts, 100);
 
 
 
