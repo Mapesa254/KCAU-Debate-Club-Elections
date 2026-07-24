@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit.components.v1 import iframe
 
 
-@st.cache_resource
+#@st.cache_resource
 def setup_static_dashboard():
     base_dir = os.path.dirname(__file__)
     dashboard_dir = os.path.join(base_dir, "legacy", "dashboard")
