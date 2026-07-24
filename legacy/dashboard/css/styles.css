@@ -408,7 +408,7 @@ body {
     border-bottom: var(--glass-border);
     display: flex;
     align-items: center;
-    padding: 10rem 32px 1rem 32px;
+    padding: 8px 32px 1px 32px;
     gap: 16px;
 }
 
