@@ -31,6 +31,9 @@ def main():
                     padding-bottom: 0rem;
                     padding-left: 0rem;
                     padding-right: 0rem;
+                
+                iframe {
+                    width: 100% !important;
                 }
         </style>
         """, unsafe_allow_html=True)
