@@ -410,7 +410,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 32px;
+    padding: 5rem 20px 16px 20px;
     gap: 16px;
 }
 
