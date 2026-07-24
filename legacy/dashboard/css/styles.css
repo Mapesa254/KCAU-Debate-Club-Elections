@@ -393,6 +393,7 @@ body {
     margin-left: var(--sidebar-width);
     min-height: 100vh;
     transition: margin-left var(--transition-slow);
+    padding: 8px 32px;
 }
 
 /* ─── Topbar ─────────────────────────────────────────────────────── */
@@ -408,8 +409,7 @@ body {
     border-bottom: var(--glass-border);
     display: flex;
     align-items: center;
-    padding: 8px 32px 1px 32px;
-    gap: 16px;
+    justify-content: space-between;
 }
 
 .menu-toggle {
