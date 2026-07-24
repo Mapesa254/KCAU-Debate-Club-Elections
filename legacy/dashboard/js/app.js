@@ -17,23 +17,10 @@
         return;
     }
 
-    // ─── Theme Toggle ───────────────────────────────────────────────
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('.theme-icon');
-    const savedTheme = localStorage.getItem('kcau-theme') || 'dark';
+    // ─── Theme Setup ───────────────────────────────────────────────
+    const savedTheme = localStorage.getItem('kcau-theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeIcon.className = savedTheme === 'dark' ? 'ph ph-moon theme-icon' : 'ph ph-sun theme-icon';
 
-    themeToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('kcau-theme', next);
-        themeIcon.className = next === 'dark' ? 'ph ph-moon theme-icon' : 'ph ph-sun theme-icon';
-        // Re-render charts for theme
-        Charts.refreshAll(data);
-        renderPositionCharts();
-    });
 
     // ─── Sidebar Toggle (Mobile) ────────────────────────────────────
     const sidebar = document.getElementById('sidebar');
@@ -97,14 +84,11 @@
         
         // Hide sidebar toggle button and PDF button temporarily
         const pdfBtn = document.getElementById('exportPdfBtn');
-        const themeBtn = document.getElementById('themeToggle');
         pdfBtn.style.display = 'none';
-        themeBtn.style.display = 'none';
 
         html2pdf().set(opt).from(element).save().then(() => {
             document.body.classList.remove('pdf-export-mode');
             pdfBtn.style.display = '';
-            themeBtn.style.display = '';
         });
     });
 

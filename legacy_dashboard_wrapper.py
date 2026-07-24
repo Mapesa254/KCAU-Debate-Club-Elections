@@ -27,7 +27,7 @@ def main():
     st.markdown("""
         <style>
                .block-container {
-                    padding-top: 10rem;
+                    padding-top: 1rem;
                     padding-bottom: 0rem;
                     padding-left: 0rem;
                     padding-right: 0rem;
