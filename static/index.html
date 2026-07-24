@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="KCAU Debate Club Elections 2026/27 — Comprehensive Analytics Dashboard with interactive charts, KPI tracking, and detailed position-level analysis.">
+    <title>KCAU Debate Club Elections 2026/27 — Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- ─── Sidebar ──────────────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="ph ph-chart-bar logo-icon"></i>
+                <div>
+                    <h2>KCAU Debate Club</h2>
+                    <span class="logo-sub">Elections 2026/27 Analytics</span>
+                </div>
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar"><i class="ph ph-x"></i></button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#positions" class="nav-link active" data-section="positions">
+                <i class="ph ph-medal nav-icon"></i> Election Results
+            </a>
+            <a href="#summary" class="nav-link" data-section="summary">
+                <i class="ph ph-squares-four nav-icon"></i> Election Summary
+            </a>
+            <a href="#visualizations" class="nav-link" data-section="visualizations">
+                <i class="ph ph-trend-up nav-icon"></i> Visualizations
+            </a>
+
+        </nav>
+
+
+
+        <div class="sidebar-footer">
+            <div class="refresh-indicator" id="refreshIndicator">
+                <div class="refresh-bar">
+                    <div class="refresh-progress" id="refreshProgress"></div>
+                </div>
+                <span class="refresh-text" id="refreshText">Auto-refresh in 30m</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ─── Main Content ─────────────────────────────────────────── -->
+    <main class="main-content" id="mainContent">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="topbar-title">
+                <h1>KCAU Debate Club Elections 2026/27</h1>
+                <span class="topbar-subtitle" id="lastUpdated">Analytics Dashboard</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon" id="exportPdfBtn" title="Export to PDF">
+                    <i class="ph ph-file-pdf"></i>
+                </button>
+                <button class="btn-icon" id="themeToggle" title="Toggle theme">
+                    <i class="ph ph-moon theme-icon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- ═══ Section: Position-Level Analysis ═══ -->
+        <section class="section" id="positions">
+            <div class="section-header">
+                <h2 class="section-title">Position-Level Analysis</h2>
+                <p class="section-desc">Detailed breakdown for each elective position</p>
+            </div>
+            <div id="positionCards">
+                <!-- Position cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- ═══ Section: Election Summary (KPIs) ═══ -->
+        <section class="section" id="summary">
+            <div class="section-header">
+                <h2 class="section-title">Election Summary</h2>
+                <p class="section-desc">Key performance indicators for the 2026/27 elections</p>
+            </div>
+            <div class="kpi-grid" id="kpiGrid">
+                <!-- KPI cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- ═══ Section: Interactive Visualizations ═══ -->
+        <section class="section" id="visualizations">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Visualizations</h2>
+                <p class="section-desc">Explore the data with interactive charts — hover, zoom, and click for details
+                </p>
+            </div>
+
+            <div class="chart-grid">
+
+                <div class="chart-card" id="chartVoteShareCard">
+                    <h3>Overall Vote Share</h3>
+                    <div class="chart-container" id="chartVoteShare"></div>
+                </div>
+
+                <div class="chart-card" id="chartTurnoutPieCard">
+                    <h3>Turnout vs Non-Turnout</h3>
+                    <div class="chart-container" id="chartTurnoutPie"></div>
+                </div>
+
+                <div class="chart-card" id="chartVotesByPositionCard">
+                    <h3>Votes by Position</h3>
+                    <div class="chart-container" id="chartVotesByPosition"></div>
+                </div>
+
+
+                <div class="chart-card" id="chartRegisteredVsCastCard">
+                    <h3>Registered Members vs Votes Cast</h3>
+                    <div class="chart-container" id="chartRegisteredVsCast"></div>
+                </div>
+
+                <div class="chart-card" id="chartValidInvalidCard">
+                    <h3>Valid vs Invalid Votes</h3>
+                    <div class="chart-container" id="chartValidInvalid"></div>
+                </div>
+
+                <div class="chart-card" id="chartTopPositionsCard">
+                    <h3>Top Performing Positions by Turnout</h3>
+                    <div class="chart-container" id="chartTopPositions"></div>
+                </div>
+
+                <div class="chart-card full-width" id="chartCandidateRankingCard">
+                    <h3>Candidate Overall Ranking</h3>
+                    <div class="chart-container" id="chartCandidateRanking"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>KCAU Debate Club Elections 2026/27 • Analytics Dashboard</p>
+            <p class="footer-sub">Data processed on <span id="footerTimestamp"></span></p>
+        </footer>
+    </main>
+
+    <!-- ─── Overlay for mobile sidebar ───────────────────────────── -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ─── Scripts ──────────────────────────────────────────────── -->
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/charts.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

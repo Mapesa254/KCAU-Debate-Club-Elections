@@ -1,0 +1,13 @@
+{
+  "name": "kcau-debate-club-elections-dashboard",
+  "version": "1.0.0",
+  "description": "KCAU Debate Club Elections 2026/27 Analytics Dashboard",
+  "scripts": {
+    "build-data": "node build-data.js",
+    "dev": "npx -y live-server dashboard --port=3000 --no-browser",
+    "start": "node build-data.js && npx -y live-server dashboard --port=3000"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

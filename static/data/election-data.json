@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-24T08:46:05.848Z",
+    "electionTitle": "KCAU Debate Club Elections 2026/27",
+    "membersFile": "KCAU DEBATE CLUB MEMBERS.xlsx",
+    "ballotFile": "KCAU Debate Club Elections 2026_27 Ballot (Responses).xlsx"
+  },
+  "kpis": {
+    "totalRegistered": 40,
+    "totalVotesCast": 39,
+    "totalValidVotes": 39,
+    "totalInvalidVotes": 0,
+    "registeredWhoVoted": 24,
+    "membersWhoDidNotVote": 16,
+    "nonMemberVotes": 15,
+    "voterTurnout": 60,
+    "nonTurnout": 40,
+    "totalCandidates": 9,
+    "totalPositions": 6,
+    "winnersDeclared": 6
+  },
+  "positionResults": [
+    {
+      "position": "PRESIDENT",
+      "candidates": [
+        {
+          "name": "Newton Ombaka",
+          "votes": 39,
+          "percentage": "100.0"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 1,
+      "winner": {
+        "name": "Newton Ombaka",
+        "votes": 39,
+        "percentage": "100.0"
+      },
+      "runnerUp": null,
+      "marginOfVictory": 39,
+      "marginPercentage": "100.0",
+      "isUncontested": true
+    },
+    {
+      "position": "VICE PRESIDENT",
+      "candidates": [
+        {
+          "name": "Akankunda Shallon",
+          "votes": 25,
+          "percentage": "64.1"
+        },
+        {
+          "name": "Amilia Rehan",
+          "votes": 14,
+          "percentage": "35.9"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 2,
+      "winner": {
+        "name": "Akankunda Shallon",
+        "votes": 25,
+        "percentage": "64.1"
+      },
+      "runnerUp": {
+        "name": "Amilia Rehan",
+        "votes": 14,
+        "percentage": "35.9"
+      },
+      "marginOfVictory": 11,
+      "marginPercentage": "28.2",
+      "isUncontested": false
+    },
+    {
+      "position": "SECRETARY GENERAL",
+      "candidates": [
+        {
+          "name": "Osman Abdullahi",
+          "votes": 39,
+          "percentage": "100.0"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 1,
+      "winner": {
+        "name": "Osman Abdullahi",
+        "votes": 39,
+        "percentage": "100.0"
+      },
+      "runnerUp": null,
+      "marginOfVictory": 39,
+      "marginPercentage": "100.0",
+      "isUncontested": true
+    },
+    {
+      "position": "ORGANISING SECRETARY",
+      "candidates": [
+        {
+          "name": "George Mwai",
+          "votes": 21,
+          "percentage": "53.8"
+        },
+        {
+          "name": "Fiona Bett",
+          "votes": 13,
+          "percentage": "33.3"
+        },
+        {
+          "name": "Josephat Mulei",
+          "votes": 5,
+          "percentage": "12.8"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 3,
+      "winner": {
+        "name": "George Mwai",
+        "votes": 21,
+        "percentage": "53.8"
+      },
+      "runnerUp": {
+        "name": "Fiona Bett",
+        "votes": 13,
+        "percentage": "33.3"
+      },
+      "marginOfVictory": 8,
+      "marginPercentage": "20.5",
+      "isUncontested": false
+    },
+    {
+      "position": "PUBLICITY SECRETARY",
+      "candidates": [
+        {
+          "name": "Nyamungu Achieng",
+          "votes": 39,
+          "percentage": "100.0"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 1,
+      "winner": {
+        "name": "Nyamungu Achieng",
+        "votes": 39,
+        "percentage": "100.0"
+      },
+      "runnerUp": null,
+      "marginOfVictory": 39,
+      "marginPercentage": "100.0",
+      "isUncontested": true
+    },
+    {
+      "position": "FINANCE SECRETARY",
+      "candidates": [
+        {
+          "name": "Yolanda Nyambura Waceke",
+          "votes": 39,
+          "percentage": "100.0"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 1,
+      "winner": {
+        "name": "Yolanda Nyambura Waceke",
+        "votes": 39,
+        "percentage": "100.0"
+      },
+      "runnerUp": null,
+      "marginOfVictory": 39,
+      "marginPercentage": "100.0",
+      "isUncontested": true
+    }
+  ],
+  "yearOfStudyData": [
+    {
+      "year": "Year 1",
+      "registered": 9,
+      "voted": 7,
+      "turnoutPercent": "77.8"
+    },
+    {
+      "year": "Year 2",
+      "registered": 14,
+      "voted": 8,
+      "turnoutPercent": "57.1"
+    },
+    {
+      "year": "Year 3",
+      "registered": 6,
+      "voted": 2,
+      "turnoutPercent": "33.3"
+    },
+    {
+      "year": "Year 4",
+      "registered": 3,
+      "voted": 2,
+      "turnoutPercent": "66.7"
+    },
+    {
+      "year": "Year 5",
+      "registered": 7,
+      "voted": 4,
+      "turnoutPercent": "57.1"
+    },
+    {
+      "year": "Year 6",
+      "registered": 1,
+      "voted": 1,
+      "turnoutPercent": "100.0"
+    },
+    {
+      "year": "Year 7",
+      "registered": 0,
+      "voted": 0,
+      "turnoutPercent": "0"
+    }
+  ],
+  "dataQuality": {
+    "totalRejectedVotes": 0,
+    "summary": {
+      "invalidRegCount": 0,
+      "duplicateVoteCount": 0,
+      "duplicateMemberCount": 1,
+      "missingVoteCount": 16,
+      "nonMemberVoterCount": 15
+    }
+  },
+  "insights": {
+    "highestParticipationPosition": "PRESIDENT",
+    "closestElection": {
+      "position": "ORGANISING SECRETARY",
+      "candidates": [
+        {
+          "name": "George Mwai",
+          "votes": 21,
+          "percentage": "53.8"
+        },
+        {
+          "name": "Fiona Bett",
+          "votes": 13,
+          "percentage": "33.3"
+        },
+        {
+          "name": "Josephat Mulei",
+          "votes": 5,
+          "percentage": "12.8"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 3,
+      "winner": {
+        "name": "George Mwai",
+        "votes": 21,
+        "percentage": "53.8"
+      },
+      "runnerUp": {
+        "name": "Fiona Bett",
+        "votes": 13,
+        "percentage": "33.3"
+      },
+      "marginOfVictory": 8,
+      "marginPercentage": "20.5",
+      "isUncontested": false
+    },
+    "highestVoteCandidate": {
+      "name": "Newton Ombaka",
+      "votes": 39,
+      "percentage": "100.0"
+    },
+    "largestMargin": {
+      "position": "VICE PRESIDENT",
+      "candidates": [
+        {
+          "name": "Akankunda Shallon",
+          "votes": 25,
+          "percentage": "64.1"
+        },
+        {
+          "name": "Amilia Rehan",
+          "votes": 14,
+          "percentage": "35.9"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 2,
+      "winner": {
+        "name": "Akankunda Shallon",
+        "votes": 25,
+        "percentage": "64.1"
+      },
+      "runnerUp": {
+        "name": "Amilia Rehan",
+        "votes": 14,
+        "percentage": "35.9"
+      },
+      "marginOfVictory": 11,
+      "marginPercentage": "28.2",
+      "isUncontested": false
+    },
+    "smallestMargin": {
+      "position": "ORGANISING SECRETARY",
+      "candidates": [
+        {
+          "name": "George Mwai",
+          "votes": 21,
+          "percentage": "53.8"
+        },
+        {
+          "name": "Fiona Bett",
+          "votes": 13,
+          "percentage": "33.3"
+        },
+        {
+          "name": "Josephat Mulei",
+          "votes": 5,
+          "percentage": "12.8"
+        }
+      ],
+      "totalVotes": 39,
+      "totalCandidates": 3,
+      "winner": {
+        "name": "George Mwai",
+        "votes": 21,
+        "percentage": "53.8"
+      },
+      "runnerUp": {
+        "name": "Fiona Bett",
+        "votes": 13,
+        "percentage": "33.3"
+      },
+      "marginOfVictory": 8,
+      "marginPercentage": "20.5",
+      "isUncontested": false
+    },
+    "nonVoterPercentage": "40.0",
+    "yearWithHighestTurnout": {
+      "year": "Year 6",
+      "registered": 1,
+      "voted": 1,
+      "turnoutPercent": "100.0"
+    },
+    "yearWithLowestTurnout": {
+      "year": "N/A",
+      "turnoutPercent": "0"
+    }
+  },
+  "allCandidates": [
+    {
+      "name": "Newton Ombaka",
+      "votes": 39,
+      "percentage": "100.0",
+      "position": "PRESIDENT",
+      "isWinner": true
+    },
+    {
+      "name": "Akankunda Shallon",
+      "votes": 25,
+      "percentage": "64.1",
+      "position": "VICE PRESIDENT",
+      "isWinner": true
+    },
+    {
+      "name": "Amilia Rehan",
+      "votes": 14,
+      "percentage": "35.9",
+      "position": "VICE PRESIDENT",
+      "isWinner": false
+    },
+    {
+      "name": "Osman Abdullahi",
+      "votes": 39,
+      "percentage": "100.0",
+      "position": "SECRETARY GENERAL",
+      "isWinner": true
+    },
+    {
+      "name": "George Mwai",
+      "votes": 21,
+      "percentage": "53.8",
+      "position": "ORGANISING SECRETARY",
+      "isWinner": true
+    },
+    {
+      "name": "Fiona Bett",
+      "votes": 13,
+      "percentage": "33.3",
+      "position": "ORGANISING SECRETARY",
+      "isWinner": false
+    },
+    {
+      "name": "Josephat Mulei",
+      "votes": 5,
+      "percentage": "12.8",
+      "position": "ORGANISING SECRETARY",
+      "isWinner": false
+    },
+    {
+      "name": "Nyamungu Achieng",
+      "votes": 39,
+      "percentage": "100.0",
+      "position": "PUBLICITY SECRETARY",
+      "isWinner": true
+    },
+    {
+      "name": "Yolanda Nyambura Waceke",
+      "votes": 39,
+      "percentage": "100.0",
+      "position": "FINANCE SECRETARY",
+      "isWinner": true
+    }
+  ],
+  "nonVoterList": [
+    {
+      "regNo": "25/08062",
+      "name": "Billy Lbaruni"
+    },
+    {
+      "regNo": "24/06576",
+      "name": "Churchil John Wesley"
+    },
+    {
+      "regNo": "22/06872",
+      "name": "David Wekesa"
+    },
+    {
+      "regNo": "25/07987",
+      "name": "Derrick Kipchumba"
+    },
+    {
+      "regNo": "22/06569",
+      "name": "Ezekiel"
+    },
+    {
+      "regNo": "26/02432",
+      "name": "Gikuyu Peterson"
+    },
+    {
+      "regNo": "25/02332",
+      "name": "Joy Ninah"
+    },
+    {
+      "regNo": "22/00843",
+      "name": "Judah Kiprotich"
+    },
+    {
+      "regNo": "23/06525",
+      "name": "Nyakio Wachira"
+    },
+    {
+      "regNo": "25/02515",
+      "name": "Odhiambo Derrick"
+    },
+    {
+      "regNo": "26/04322",
+      "name": "Radley chweya"
+    },
+    {
+      "regNo": "24/07259",
+      "name": "Roy Ian Nasser"
+    },
+    {
+      "regNo": "24/07516",
+      "name": "Samuel Kimathi"
+    },
+    {
+      "regNo": "24/06646",
+      "name": "Sharon Kimutai"
+    },
+    {
+      "regNo": "25/08351",
+      "name": "Thon Ayiik"
+    },
+    {
+      "regNo": "25/00437",
+      "name": "Venah Otieno"
+    }
+  ]
+}
