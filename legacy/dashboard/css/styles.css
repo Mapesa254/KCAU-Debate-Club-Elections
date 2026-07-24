@@ -408,9 +408,10 @@ body {
     border-bottom: var(--glass-border);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 20px 16px 20px;
+    padding: 50px 20px 16px 20px;
     gap: 16px;
 }
 
