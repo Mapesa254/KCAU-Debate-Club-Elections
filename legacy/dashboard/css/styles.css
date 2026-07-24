@@ -397,17 +397,18 @@ body {
 
 /* ─── Topbar ─────────────────────────────────────────────────────── */
 .topbar {
-    position: sticky;
-    top: 0;
+    position: static;
+    top: auto;
     z-index: 50;
-    height: var(--topbar-height);
+    height: auto;
+    min-height: var(--topbar-height);
     background: var(--bg-topbar);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-bottom: var(--glass-border);
     display: flex;
     align-items: center;
-    padding: 0 32px;
+    padding: 10rem 32px 1rem 32px;
     gap: 16px;
 }
 
@@ -1330,7 +1331,7 @@ body {
 /* ─── Responsive Adjustments for Mobile Header ───────────────────── */
 @media (max-width: 768px) {
     .topbar {
-        padding: 16px 20px;
+        padding: 10rem 20px 16px 20px;
         height: auto;
         min-height: var(--topbar-height);
         flex-wrap: wrap;

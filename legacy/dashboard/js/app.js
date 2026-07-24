@@ -258,8 +258,11 @@
     setInterval(updateRefreshUI, 1000);
 
     // ─── Footer Timestamp ───────────────────────────────────────────
-    document.getElementById('footerTimestamp').textContent = Utils.formatDate(data.meta.generatedAt);
-    document.getElementById('lastUpdated').textContent = `Last updated: ${Utils.formatDate(data.meta.generatedAt)}`;
+    const footerTimestamp = document.getElementById('footerTimestamp');
+    if (footerTimestamp) footerTimestamp.textContent = Utils.formatDate(data.meta.generatedAt);
+    
+    const lastUpdated = document.getElementById('lastUpdated');
+    if (lastUpdated) lastUpdated.textContent = `Last updated: ${Utils.formatDate(data.meta.generatedAt)}`;
 
     // ─── Render Everything ──────────────────────────────────────────
     renderKPIs();
