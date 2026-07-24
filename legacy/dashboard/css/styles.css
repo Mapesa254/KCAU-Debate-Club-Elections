@@ -1233,15 +1233,15 @@ body {
     }
 
     .chart-container {
-        min-height: 300px;
+        min-height: 450px;
     }
 
     .chart-card.full-width .chart-container {
-        min-height: 350px;
+        min-height: 550px;
     }
 
     .position-chart-container {
-        min-height: 250px;
+        min-height: 350px;
     }
 
     .kpi-grid {
@@ -1278,17 +1278,58 @@ body {
     }
 
     .topbar-title h1 {
-        font-size: 0.95rem;
+        font-size: 1rem;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.2;
     }
 }
 
 @media (max-width: 480px) {
     .kpi-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .position-stats {
         grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 20px 16px;
+    }
+}
+
+/* ─── Responsive Adjustments for Mobile Header ───────────────────── */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0 16px;
+        height: auto;
+        min-height: var(--topbar-height);
+        flex-wrap: wrap;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .topbar-title h1 {
+        font-size: 1.05rem;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    
+    .topbar-actions {
+        margin-top: 8px;
+    }
+}
+
+/* ─── Container Padding Adjustments ──────────────────────────────── */
+/* Increase padding slightly for larger screens so it isn't squeezed */
+@media (min-width: 1025px) {
+    .section {
+        padding: 48px 40px;
+    }
+    .chart-card, .position-card {
+        padding: 32px;
     }
 }
 
@@ -1302,54 +1343,40 @@ body {
     font-size: 14px !important;
 }
 
-/* ─── Print Styles ───────────────────────────────────────────────── */
+/* ─── Print Styles for PDF Export ────────────────────────────────── */
+
 @media print {
-    .sidebar, .topbar, .sidebar-overlay { display: none !important; }
-    .main-content { margin-left: 0 !important; }
-    .section { page-break-inside: avoid; }
-    .kpi-card, .chart-card, .position-card { break-inside: avoid; }
-    body { background: #fff; color: #000; }
+    body { background-color: #ffffff !important; color: #000000 !important; }
+    .sidebar, .sidebar-overlay, .topbar-actions, .menu-toggle { display: none !important; }
+    .main-content { margin-left: 0 !important; width: 100% !important; }
+    .topbar { position: relative !important; box-shadow: none !important; background: transparent !important; border-bottom: 1px solid #ccc; }
+    .section { page-break-inside: auto; }
+    .chart-card, .position-card, .kpi-card { break-inside: avoid !important; page-break-inside: avoid !important; box-shadow: none !important; border: 1px solid #ccc !important; background: #ffffff !important; color: #000000 !important; }
+    .dashboard-section { page-break-after: always; }
+    .kpi-value, .stat-value, .winner-name { color: #000000 !important; }
+    * { transition: none !important; animation: none !important; }
 }
 
- / *    % % %  P r i n t   S t y l e s   f o r   P D F   E x p o r t    % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %  * / 
- @ m e d i a   p r i n t   { 
-         b o d y   { 
-                 b a c k g r o u n d - c o l o r :   # f f f f f f   ! i m p o r t a n t ; 
-                 c o l o r :   # 0 0 0 0 0 0   ! i m p o r t a n t ; 
-         } 
-         . s i d e b a r   { 
-                 d i s p l a y :   n o n e   ! i m p o r t a n t ; 
-         } 
-         . m a i n - c o n t e n t   { 
-                 m a r g i n - l e f t :   0   ! i m p o r t a n t ; 
-                 w i d t h :   1 0 0 %   ! i m p o r t a n t ; 
-         } 
-         . t o p b a r   { 
-                 p o s i t i o n :   r e l a t i v e   ! i m p o r t a n t ; 
-                 b o x - s h a d o w :   n o n e   ! i m p o r t a n t ; 
-                 b a c k g r o u n d :   t r a n s p a r e n t   ! i m p o r t a n t ; 
-         } 
-         . t o p b a r - a c t i o n s ,   . m e n u - t o g g l e   { 
-                 d i s p l a y :   n o n e   ! i m p o r t a n t ; 
-         } 
-         . c h a r t - c a r d ,   . p o s i t i o n - c a r d ,   . k p i - c a r d ,   . q u a l i t y - c a r d ,   . i n s i g h t - c a r d   { 
-                 b r e a k - i n s i d e :   a v o i d   ! i m p o r t a n t ; 
-                 p a g e - b r e a k - i n s i d e :   a v o i d   ! i m p o r t a n t ; 
-                 b o x - s h a d o w :   n o n e   ! i m p o r t a n t ; 
-                 b o r d e r :   1 p x   s o l i d   # c c c   ! i m p o r t a n t ; 
-                 b a c k g r o u n d :   # f f f f f f   ! i m p o r t a n t ; 
-                 c o l o r :   # 0 0 0 0 0 0   ! i m p o r t a n t ; 
-         } 
-         . d a s h b o a r d - s e c t i o n   { 
-                 p a g e - b r e a k - a f t e r :   a l w a y s ; 
-         } 
-         . k p i - v a l u e ,   . s t a t - v a l u e ,   . w i n n e r - n a m e   { 
-                 c o l o r :   # 0 0 0 0 0 0   ! i m p o r t a n t ; 
-         } 
-         *   { 
-                 t r a n s i t i o n :   n o n e   ! i m p o r t a n t ; 
-                 a n i m a t i o n :   n o n e   ! i m p o r t a n t ; 
-         } 
- } 
-  
- 
+/* Extra classes for html2pdf direct export mode */
+body.pdf-export-mode {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+body.pdf-export-mode .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+body.pdf-export-mode .chart-card, 
+body.pdf-export-mode .position-card, 
+body.pdf-export-mode .kpi-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+body.pdf-export-mode * {
+    transition: none !important;
+    animation: none !important;
+}
