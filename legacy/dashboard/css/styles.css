@@ -1303,22 +1303,32 @@ body {
 /* ─── Responsive Adjustments for Mobile Header ───────────────────── */
 @media (max-width: 768px) {
     .topbar {
-        padding: 0 16px;
+        padding: 16px 20px;
         height: auto;
         min-height: var(--topbar-height);
         flex-wrap: wrap;
-        padding-top: 8px;
-        padding-bottom: 8px;
     }
     
-    .topbar-title h1 {
-        font-size: 1.05rem;
-        word-wrap: break-word;
-        white-space: normal;
+    .menu-toggle {
+        order: 1;
     }
     
     .topbar-actions {
-        margin-top: 8px;
+        order: 2;
+        margin-top: 0;
+    }
+    
+    .topbar-title {
+        order: 3;
+        flex-basis: 100%;
+        margin-top: 16px;
+        text-align: center;
+    }
+    
+    .topbar-title h1 {
+        font-size: 1.15rem;
+        word-wrap: break-word;
+        white-space: normal;
     }
 }
 
