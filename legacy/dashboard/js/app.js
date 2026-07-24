@@ -69,27 +69,11 @@
 
     // ─── PDF Export ─────────────────────────────────────────────────
     document.getElementById('exportPdfBtn').addEventListener('click', () => {
-        const element = document.getElementById('mainContent');
-        const opt = {
-            margin:       0.2,
-            filename:     'KCAU_Elections_Report.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, windowWidth: 1200 },
-            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-            pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
-        };
-        
-        // Add a temporary class to adjust layout specifically for PDF if needed
-        document.body.classList.add('pdf-export-mode');
-        
-        // Hide sidebar toggle button and PDF button temporarily
-        const pdfBtn = document.getElementById('exportPdfBtn');
-        pdfBtn.style.display = 'none';
-
-        html2pdf().set(opt).from(element).save().then(() => {
-            document.body.classList.remove('pdf-export-mode');
-            pdfBtn.style.display = '';
-        });
+        if (typeof PdfExporter !== 'undefined') {
+            PdfExporter.export();
+        } else {
+            alert('PDF Export script not loaded yet.');
+        }
     });
 
 
