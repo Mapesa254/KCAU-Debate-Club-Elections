@@ -24,15 +24,7 @@ def main():
         layout="wide",
     )
 
-    st.markdown(
-        """
-        <div style="padding: 0.4rem 0 1rem 0;">
-            <h1 style="margin:0; font-size:1.7rem;">KCAU Debate Club Elections 2026/27</h1>
-            <p style="margin:0.25rem 0 0 0; color:#64748b;">Serving the original HTML dashboard unchanged inside Streamlit.</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+
 
     setup_static_dashboard()
     
